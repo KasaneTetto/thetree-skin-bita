@@ -1,0 +1,22 @@
+.thetree-alert {
+    color: #178150;
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    border-radius: .25rem;
+    column-gap: .75rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: .5rem .75rem;
+}
+
+.thetree-alert-primary {
+    background-color: #bfe7fc;
+    border-color: #94bdfa;
+    color: #2657a0
+}
+
+.thetree-alert-danger {
+    background-color: #f2dede;
+    border-color: #b94b56;
+    color: #7e1b1b;
+}
