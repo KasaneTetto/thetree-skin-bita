@@ -1,4 +1,6 @@
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import './font/Nexon\ MapleStory.css';
+@import './font/Pretendard.css';
+
 /* 메인 색깔 #4188f1 */
 /* 테두리 색깔 #e1e8ed */
 
@@ -16,15 +18,15 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Noto Sans Korean", "Noto Sans", "Nanum Gothic", "KoPubDotum M", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-family: "Pretendard-Regular", "MaplestoryOTFBold";
 }
 
 h1, h2, h3, h4, h5, h6, b {
-    font-family:  "Noto Sans Korean", "Noto Sans", "Nanum Gothic", "KoPubDotum B","Malgun Gothic", "맑은 고딕", sans-serif;
+    font-family: "Pretendard-Regular", "MaplestoryOTFBold";
 }
 
 input[type=password] {
-    font-family: sans-serif;
+    font-family: "Pretendard-Regular";
 }
 
 h1 {
@@ -84,6 +86,11 @@ th[rowspan]:after, td[rowspan]:after {
     width: 1px;
     height: 100%;
     /*background: #e0e0e0;*/
+}
+
+ion-icon {
+    font-size: 15px;
+    padding: auto;
 }
 
 input[type=search] {
