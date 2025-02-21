@@ -88,9 +88,9 @@ th[rowspan]:after, td[rowspan]:after {
     /*background: #e0e0e0;*/
 }
 
-ion-icon {
+.ion {
     font-size: 15px;
-    padding: auto;
+    padding: 2px;
 }
 
 input[type=search] {

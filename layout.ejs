@@ -7,7 +7,6 @@ window.requestable = JSON.stringify(requestable);
 <script src="/skins/<%=skin%>/js/main.js"></script>
 
 <style>
-  @import url(https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/collection/components/icon/icon.min.css);
   @import "/skins/<%=skin%>/css/bootstrap.min.css";
   @import "/skins/<%=skin%>/css/font/Pretendard.css";
   @import "/skins/<%=skin%>/css/default.css";
@@ -26,33 +25,33 @@ window.requestable = JSON.stringify(requestable);
       <a class="navbar-brand" href="/"><%=config.logo_text%></a>
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/RecentChanges"><ion-icon name="compass-outline"></ion-icon><span class="hide-title">최근 변경</span></a>
+          <a class="nav-link" href="/RecentChanges"><span class="ion ion-ios-compass"></span><span class="hide-title">최근 변경</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/RecentDiscuss"><ion-icon name="chatbubbles-outline"></ion-icon><span class="hide-title">최근 토론</span></a>
+          <a class="nav-link" href="/RecentDiscuss"><span class="ion ion-ios-chatbubbles"></span><span class="hide-title">최근 토론</span></a>
         </li>
         <li class="nav-item" x-data="{ open: false }">
           <div class="dropdown">
             <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" @click.prevent="open = !open">
-              <ion-icon name="ellipsis-horizontal-outline"></ion-icon><span class="hide-title">도구</span></a>
+              <span class="ion ion-ios-menu"></span><span class="hide-title">도구</span></a>
             <div class="open" x-cloak x-show="open" @click="open = false" @click.outside="open = false">
               <div class="dropdown-menu" role="menu">
-                <a href="/Upload" class="dropdown-item"><ion-icon name="cloud-upload-outline"></ion-icon>파일 올리기</a>
-                <a href="/random" class="dropdown-item"><ion-icon name="shuffle-outline"></ion-icon>아무 문서</a>
+                <a href="/Upload" class="dropdown-item"><span class="ion ion-ios-cloud-upload"></span>파일 올리기</a>
+                <a href="/random" class="dropdown-item"><span class="ion ion-ios-shuffle"></span>아무 문서</a>
                 <div class="dropdown-divider"></div>
-                <a href="/NeededPages" class="dropdown-item"><ion-icon name="brush-outline"></ion-icon>작성이 필요한 문서</a>
-                <a href="/OrphanedPages" class="dropdown-item"><ion-icon name="document-lock-outline"></ion-icon>고립된 문서</a>
-                <a href="/UncategorizedPages" class="dropdown-item"><ion-icon name="document-attach-outline"></ion-icon>분류가 되지 않은 문서</a>
-                <a href="/OldPages" class="dropdown-item"><ion-icon name="alarm-outline"></ion-icon>편집된 지 오래된 문서</a>
-                <a href="/LongestPages" class="dropdown-item"><ion-icon name="trending-up-outline"></ion-icon>내용이 긴 문서</a>
-                <a href="/ShortestPages" class="dropdown-item"><ion-icon name="trending-down-outline"></ion-icon>내용이 짧은 문서</a>
-                <a href="/BlockHistory" class="dropdown-item"><ion-icon name="documents-outline"></ion-icon>차단 내역</a>
-                <a href="/RandomPage" class="dropdown-item"><ion-icon name="git-branch-outline"></ion-icon>RandomPage</a>
-                <a href="/License" class="dropdown-item"><ion-icon name="logo-closed-captioning"></ion-icon>라이선스</a>
+                <a href="/NeededPages" class="dropdown-item"><span class="ion ion-ios-brush"></span>작성이 필요한 문서</a>
+                <a href="/OrphanedPages" class="dropdown-item"><span class="ion ion-ios-document-lock"></span>고립된 문서</a>
+                <a href="/UncategorizedPages" class="dropdown-item"><span class="ion ion-ios-document-attach"></span>분류가 되지 않은 문서</a>
+                <a href="/OldPages" class="dropdown-item"><span class="ion ion-ios-alarm"></span>편집된 지 오래된 문서</a>
+                <a href="/LongestPages" class="dropdown-item"><span class="ion-ios-trendiion ng-up"></span>내용이 긴 문서</a>
+                <a href="/ShortestPages" class="dropdown-item"><span class="ion ion-ios-trending-down"></span>내용이 짧은 문서</a>
+                <a href="/BlockHistory" class="dropdown-item"><span class="ion ion-ios-documents"></span>차단 내역</a>
+                <a href="/RandomPage" class="dropdown-item"><span class="ion ion-ios-git-branch"></span>RandomPage</a>
+                <a href="/License" class="dropdown-item"><span class="ion ion-ios-logo-closed-captioning"></span>라이선스</a>
                 <%if(session.menus.length) {%>
                 <div class="dropdown-divider"></div>
                 <%for(let m of session.menus) {%>
-                <a href="<%=m.l%>" class="dropdown-item"><ion-icon name="diamond-outline"></ion-icon><%=m.t%></a>
+                <a href="<%=m.l%>" class="dropdown-item"><span class="ion ion-ios-diamond"></span><%=m.t%></a>
                 <%}%>
                 <%}%>
               </div>
@@ -99,7 +98,7 @@ window.requestable = JSON.stringify(requestable);
               <%if(session.account.type === UserTypes.Account) {%>
                 <a href="/member/logout" data-add-redirect class="dropdown-item">로그아웃</a>
               <%} else {%>
-                <a href="/member/login" data-add-redirect class="dropdown-item"><ion-icon name="enter-outline"></ion-icon>로그인</a>
+                <a href="/member/login" data-add-redirect class="dropdown-item"><span name="ion ion-ios-enter"></span>로그인</a>
               <%}%>
             </div>
           </div>
