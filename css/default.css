@@ -91,6 +91,11 @@ input[type=search] {
     -webkit-appearance: none; /* iOS 잡다한 css설정 제거 */
 }
 
+ion-icon {
+    padding: 2cm;
+    font-size: 13px;
+}
+
 textarea {
     width: 100%;
     border: 1px solid #e1e8ed;
