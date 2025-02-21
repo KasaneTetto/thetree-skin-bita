@@ -26,7 +26,7 @@ function selectByTheme(light, dark) {
     return localConfig['wiki.theme'] === 'dark' ? dark : light;
 }
 
-const brand_color = () => selectByTheme(CONFIG['theme_color'] ?? '#4188f1', '#2d2f34');
+const brand_color = () => selectByTheme(CONFIG['theme_color'] ?? '#ef7795', '#2d2f34');
 
 const style = document.createElement('style');
 function setStyles() {
