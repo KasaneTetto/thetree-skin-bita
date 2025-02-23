@@ -1,6 +1,4 @@
-@import './font/Nexon\ MapleStory.css';
-@import './font/Pretendard.css';
-
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 /* 메인 색깔 #87cefa */
 /* 테두리 색깔 #e1e8ed */
 
@@ -18,15 +16,15 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Pretendard-Regular", "MaplestoryOTFBold";
+    font-family: "Noto Sans Korean", "Noto Sans", "Nanum Gothic", "KoPubDotum M", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, b {
-    font-family: "Pretendard-Regular", "MaplestoryOTFBold";
+    font-family:  "Noto Sans Korean", "Noto Sans", "Nanum Gothic", "KoPubDotum B","Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 input[type=password] {
-    font-family: "Pretendard-Regular";
+    font-family: sans-serif;
 }
 
 h1 {
@@ -60,7 +58,7 @@ ol {
 pre {
     background-color: #f5f8fa;
     border: 1px solid #e1e8ed;
-    border-radius: 2.4px;
+    border-radius: 0.15rem;
     padding: 0.8rem;
     overflow-x: scroll;
 }
@@ -88,14 +86,8 @@ th[rowspan]:after, td[rowspan]:after {
     /*background: #e0e0e0;*/
 }
 
-.ion {
-    font-size: 15px;
-    padding: 2px;
-}
-
 input[type=search] {
-    -webkit-appearance: none;
-    appearance: none; /* iOS 잡다한 css설정 제거 */
+    -webkit-appearance: none; /* iOS 잡다한 css설정 제거 */
 }
 
 textarea {
@@ -133,7 +125,7 @@ del, s, strike {
 /* 네비 수정 */
 .Bita .nav-wrapper {
     min-height: 2.8rem;
-    background-color: var(--bita-brand-color, #87cefa);
+    background-color: var(--liberty-brand-color, #87cefa);
     position: absolute;
     z-index: 100;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -155,13 +147,13 @@ del, s, strike {
 
 .Bita .nav-wrapper .navbar .navbar-brand {
     height: 2.8rem;
-    width: var(--bita-navbar-logo-width, 6.6rem);
-    background-image: var(--bita-navbar-logo-image, none);
+    width: var(--liberty-navbar-logo-width, 6.6rem);
+    background-image: var(--liberty-navbar-logo-image, none);
     background-repeat: no-repeat no-repeat;
-    background-size: auto var(--bita-navbar-logo-size, 1.9rem);
+    background-size: auto var(--liberty-navbar-logo-size, 1.9rem);
     background-position: left center;
-    margin: var(--bita-navbar-logo-margin, 0);
-    padding: var(--bita-navbar-logo-padding, 0);
+    margin: var(--liberty-navbar-logo-margin, 0);
+    padding: var(--liberty-navbar-logo-padding, 0);
 }
 
 .Bita .nav-wrapper .navbar .navbar-nav .nav-item {
@@ -181,7 +173,7 @@ del, s, strike {
 }
 
 .Bita .nav-wrapper .navbar .navbar-nav .nav-item .nav-link:hover {
-	background-color: var(--bita-brand-dark-color, #214479);
+	background-color: var(--liberty-brand-dark-color, #214479);
 }
 
 .Bita .nav-wrapper .navbar .navbar-nav .nav-item .nav-link:hover,
@@ -197,7 +189,7 @@ del, s, strike {
 
 .Bita .nav-wrapper .navbar .navbar-nav .nav-item .dropdown-toggle::after {
     margin-right: 0;
-    margin-left: 2.4px;
+    margin-left: 0.15rem;
 }
 
 .Bita .nav-wrapper .navbar .form-inline {
@@ -212,8 +204,8 @@ del, s, strike {
     padding: 0.2rem 0.4rem;
     border-color: #e1e8ed;
     border-radius: 0;
-    border-top-left-radius: 2.4px;
-    border-bottom-left-radius: 2.4px;
+    border-top-left-radius: 0.15rem;
+    border-bottom-left-radius: 0.15rem;
     float: none;
 }
 
@@ -221,20 +213,15 @@ del, s, strike {
     border-right-color: #e1e8ed;
 }
 
-.Liberty .nav-wrapper .navbar .form-inline .input-search {
+.Bita .nav-wrapper .navbar .form-inline .input-search {
     display: table-cell;
+    vertical-align: middle;
     float: left;
     position: relative;
     width: 100%;
     z-index: 4;
 }
 
-.Bita .nav-wrapper .navbar .form-inline .random {
-    border-width: 1px;
-    border-color: transparent;
-    border-radius: 2.4px;
-    margin-right: 5px
-}
 .Bita .nav-wrapper .navbar .form-inline .btn {
     height: 2rem;
     color: #4f5b63;
@@ -283,7 +270,7 @@ del, s, strike {
 .Bita .nav-wrapper .navbar .navbar-login .profile-img {
     width: 2rem;
     height: 2rem;
-    border-radius: 2.4px;
+    border-radius: 0.15rem;
     margin: 0;
     border: 1px solid #e1e8ed;
 }
@@ -323,7 +310,7 @@ del, s, strike {
 }
 
 .Bita .nav-wrapper .navbar .navbar-login .login-dropdown-menu .username {
-    cursor: deionult;
+    cursor: default;
     text-align: right;
     font-size: 1rem;
     white-space: unset;
@@ -338,43 +325,43 @@ del, s, strike {
 /* 네비 수정 End */
 
 /* 오른쪽 메뉴 수정 */
-.Bita .content-wrapper .bita-sidebar {
+.Bita .content-wrapper .liberty-sidebar {
     float: right;
     width: 15rem;
     position: relative;
     word-break: break-all;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed {
     position: absolute;
     z-index: 1;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed.fixed {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed.fixed {
     position: fixed;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent {
     width: 15rem;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav {
     border: 0;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item {
     width: 15rem;
     border: 1px solid #e1e8ed;
-    border-top-left-radius: 2.4px;
-    border-top-right-radius: 2.4px;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
     background-color: #f5f8fa;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link {
     border: 0;
     border-radius: 0;
-    border-top-left-radius: 2.4px;
-    border-top-right-radius: 2.4px;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
     text-align: center;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
@@ -382,85 +369,84 @@ del, s, strike {
     position: relative;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active,
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover,
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus,
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active,
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover,
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus,
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active {
     color: #373a3c;
     background-color: #fff;
-    vertical-align: middle;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active::before {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active::before {
     position: absolute;
     left: -1px;
     bottom: -1px;
     content: " ";
     width: 15rem;
     display: block;
-    border-bottom: 2px solid var(--bita-brand-color, #87cefa);
+    border-bottom: 2px solid var(--liberty-brand-color, #87cefa);
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content {
     background-color: #fff;
     border: 1px solid #e1e8ed;
     border-top: 0;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content .live-recent-list {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content .live-recent-list li {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list li {
     border-bottom: 1px solid #e1e8ed;
     padding: 0.2rem 0.6rem;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content .live-recent-list li:last-child {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list li:last-child {
     border-bottom: none;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item {
     font-size: 0.80rem;
     color: #373a3c;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item .new {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item .new {
     font-size: 0.80rem;
     color: #b73333;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item.removed {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item.removed {
     text-decoration: line-through;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-footer {
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer {
     background-color: #f5f8fa;
     border: 1px solid #e1e8ed;
     border-top: 0;
-    border-bottom-left-radius: 2.4px;
-    border-bottom-right-radius: 2.4px;
+    border-bottom-left-radius: 0.15rem;
+    border-bottom-right-radius: 0.15rem;
     text-align: right;
     padding: 0.4rem 0.6rem;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-footer .label {
-    background-color: var(--bita-brand-color, #87cefa);
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer .label {
+    background-color: var(--liberty-brand-color, #87cefa);
     padding: 0.4rem;
     font-size: 0.8rem;
     font-weight: 400;
 }
 
-.Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-footer .label:hover {
-	background-color: var(--bita-brand-dark-color, #214479);
+.Bita .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer .label:hover {
+	background-color: var(--liberty-brand-dark-color, #214479);
 }
 
-.Bita .content-wrapper .bita-sidebar .right-ads {
+.Bita .content-wrapper .liberty-sidebar .right-ads {
     position: absolute;
     top: 25.73rem;
     width: 15rem;
@@ -472,74 +458,87 @@ del, s, strike {
     margin-top: 3.33rem;
 }
 
-.Bita .content-wrapper .bita-content {
+.Bita .content-wrapper .liberty-content {
     margin-right: 16rem;
     padding: 0;
     padding-bottom: 1rem;
     word-break: break-all;
 }
 
-.Bita .content-wrapper.hide-sidebar .bita-sidebar {
+.Bita .content-wrapper.hide-sidebar .liberty-sidebar {
     display: none;
 }
 
-.Bita .content-wrapper.hide-sidebar .bita-content {
+.Bita .content-wrapper.hide-sidebar .liberty-content {
     margin-right: 0 !important;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header {
+.Bita .content-wrapper .liberty-content .notification .label {
+    background-color: #d9edf7;
+    color: #2f4f4f;
+    padding: 10px;
+    line-height: 1rem;
+    margin: 0 0 0.6rem 0;
+    font-size: 1rem;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+}
+
+.Bita .content-wrapper .liberty-content .liberty-content-header {
     border: 1px solid #e1e8ed;
-    border-radius: 2.4px 2.4px 0 0;
+    border-radius: 0.15rem 0.15rem 0 0;
     background-color: #f5f8fa;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .bita-notice {
+.Bita .content-wrapper .liberty-content .liberty-content-header .liberty-notice {
     margin: 1rem;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .bita-notice ul {
+.Bita .content-wrapper .liberty-content .liberty-content-header .liberty-notice ul {
     list-style-image: none;
     list-style-type: none;
     text-align: center;
     line-height: 1.8rem;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .title {
+.Bita .content-wrapper .liberty-content .liberty-content-header .title {
     padding: 1rem;
     min-height: 65px;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .contentSub {
+.Bita .content-wrapper .liberty-content .liberty-content-header .contentSub {
     margin-top: -0.5rem;
     padding: 1rem;
     padding-top: 0;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .title>h1 {
+.Bita .content-wrapper .liberty-content .liberty-content-header .title>h1 {
     color: #000;
     font-weight: bold;
     margin: 0;
     line-height: 1.1;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .title>h1>small {
+.Bita .content-wrapper .liberty-content .liberty-content-header .title>h1>small {
     margin-left: 0.4rem;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .title>h1>a {
+.Bita .content-wrapper .liberty-content .liberty-content-header .title>h1>a {
     color: #000;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .title .namespace {
+.Bita .content-wrapper .liberty-content .liberty-content-header .title .namespace {
     color: #545454;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-header .header-ads {
+.Bita .content-wrapper .liberty-content .liberty-content-header .header-ads {
     margin: 1rem;
     margin-bottom: 0;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-main {
+.Bita .content-wrapper .liberty-content .liberty-content-main {
     border-left: 1px solid #e1e8ed;
     border-right: 1px solid #e1e8ed;
     background-color: #fff;
@@ -563,19 +562,19 @@ del, s, strike {
 }
 
 .Bita .content-wrapper .footer-recent .live-recent-footer .label {
-    background-color: var(--bita-brand-color, #87cefa);
+    background-color: var(--liberty-brand-color, #87cefa);
     font-size: .8rem;
     font-weight: 400;
     padding: .4rem;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-main .social-buttons {
+.Bita .content-wrapper .liberty-content .liberty-content-main .social-buttons {
     float: right;
     margin-bottom: 1rem;
     width: 100%;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-main .social-buttons>div {
+.Bita .content-wrapper .liberty-content .liberty-content-main .social-buttons>div {
     float: right;
     width: 2.5rem;
     height: 2.5rem;
@@ -583,7 +582,7 @@ del, s, strike {
     padding: 0;
     padding-top: 0.45rem;
     margin-left: 0.25rem;
-    border-radius: 2.4px;
+    border-radius: 0.15rem;
     text-align: center;
     cursor: pointer;
     background: #ccc;
@@ -592,30 +591,30 @@ del, s, strike {
     font-size: 1.8rem;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-main .social-buttons>.ioncebook {
+.Bita .content-wrapper .liberty-content .liberty-content-main .social-buttons>.ioncebook {
     background-color: #5d82d1;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-main .social-buttons>.twitter {
+.Bita .content-wrapper .liberty-content .liberty-content-main .social-buttons>.twitter {
     background-color: #40bff5;
 }
 
-.Bita .content-wrapper .bita-content .bita-content-main .social-buttons>.google {
+.Bita .content-wrapper .liberty-content .liberty-content-main .social-buttons>.google {
     background-color: #eb5e4c;
     display: none;
 }
 /* 컨텐츠 수정 End */
 
 /* 컨텐츠 하단 수정 */
-.Bita .content-wrapper .bita-footer {
+.Bita .content-wrapper .liberty-footer {
     border: 1px solid #e1e8ed;
-    border-radius: 0 0 2.4px 2.4px;
+    border-radius: 0 0 0.15rem 0.15rem;
     background-color: #f5f8fa;
     padding: 1rem;
     clear: both;
 }
 
-.Bita .content-wrapper .bita-footer ul {
+.Bita .content-wrapper .liberty-footer ul {
     list-style-type: none;
     list-style-image: none;
     display: inline-block;
@@ -634,7 +633,7 @@ del, s, strike {
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background-color: var(--bita-brand-color, #87cefa);
+    background-color: var(--liberty-brand-color, #87cefa);
     color: #fff;
     transition: 0.3s;
 }
@@ -656,7 +655,7 @@ del, s, strike {
 
 .btn {
     box-shadow: none;
-    border-radius: 2.4px;
+    border-radius: 0.15rem;
 }
 
 .btn:active, .btn:focus {

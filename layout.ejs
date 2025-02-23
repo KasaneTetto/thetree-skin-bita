@@ -20,9 +20,9 @@ window.requestable = JSON.stringify(requestable);
   @import "/skins/<%=skin%>/css/layouts/searchForm.css";
 </style>
 
-<div class="Liberty">
+<div class="Bita">
   <div id="top"></div>
-  <div class="nav-wrapper" :class="{ 'navbar-fixed-top': $store.state.localConfig['liberty.fixed_navbar'] }">
+  <div class="nav-wrapper" :class="{ 'navbar-fixed-top': $store.state.localConfig['bita.fixed_navbar'] }">
     <nav class="navbar navbar-dark">
       <a class="navbar-brand" href="/"><%=config.logo_text%></a>
       <ul class="nav navbar-nav">
@@ -109,14 +109,14 @@ window.requestable = JSON.stringify(requestable);
       <%-include('./layouts/searchForm')%>
     </nav>
   </div>
-  <div class="content-wrapper" :class="{ 'hide-sidebar': $store.state.localConfig['liberty.sidebar'] === 'hide' || $store.state.localConfig['liberty.sidebar'] === 'footer' }">
-    <div class="liberty-sidebar">
-      <div class="liberty-right-fixed" :class="{ 'fixed': $store.state.localConfig['liberty.sidebar'] === 'fix' }">
+  <div class="content-wrapper" :class="{ 'hide-sidebar': $store.state.localConfig['bita.sidebar'] === 'hide' || $store.state.localConfig['bita.sidebar'] === 'footer' }">
+    <div class="bita-sidebar">
+      <div class="bita-right-fixed" :class="{ 'fixed': $store.state.localConfig['bita.sidebar'] === 'fix' }">
         <div class="live-recent">
           <div class="live-recent-header">
             <ul class="nav nav-tabs">
               <li class="nav-item">
-                <a id="liberty-recent-tab1" class="nav-link active"><span class="ion ion-ios-refresh-circle"></span>최근 변경</a>
+                <a id="bita-recent-tab1" class="nav-link active"><span class="ion ion-ios-refresh-circle"></span>최근 변경</a>
                 <a href="/RecentChanges" title="최근 변경내역"><span class="label label-info">더 보기</span></a>
               </li>
             </ul>
@@ -125,13 +125,13 @@ window.requestable = JSON.stringify(requestable);
         </div>
       </div>
     </div>
-    <div id="content" class="container-fluid liberty-content">
+    <div id="content" class="container-fluid bita-content">
       <%if(config.sitenotice) {%>
       <div id="site-notice" class="thetree-alert-primary">
         <span class="label"><%-config.sitenotice%></span>
       </div>
       <%}%>
-      <div class="liberty-content-header">
+      <div class="bita-content-header">
         <%-include('./layouts/contentTool')%>
         <div class="title">
           <%if(page.data.document && page.viewName !== 'error') {%>
@@ -182,7 +182,7 @@ window.requestable = JSON.stringify(requestable);
           <%}%>
         </div>
       </div>
-      <div class="liberty-content-main wiki-article">
+      <div class="bita-content-main wiki-article">
         <%if(page.data.edit_acl_message) {%>
           <div class="thetree-alert thetree-alert-danger" x-cloak x-show="$store.skin.isShowACLMessage">
             <div class="thetree-alert-content">
@@ -226,29 +226,29 @@ window.requestable = JSON.stringify(requestable);
         </div>
         <%if(page.viewName === 'license') {%>
         <div>
-          <h2>Liberty skin license</h2>
+          <h2>Bita skin license</h2>
           <pre><%=getSkinFile('LICENSE')%></pre>
         </div>
         <%}%>
         <div class="clearfix"></div>
       </div>
-      <div id="bottom" class="liberty-footer">
+      <div id="bottom" class="bita-footer">
         <%if(page.viewName === 'wiki' && page.data.date) {%>
           <ul class="footer-info">
             <%const timeTag = getFullDateTag(page.data.date);%>
             <%if(page.data.rev) {%><li class="footer-info-lastmod">이 리비전은 <%-timeTag%>에 편집되었습니다.</li>
             <%} else {%><li v-else class="footer-info-lastmod">이 문서는 <%-timeTag%>에 마지막으로 편집되었습니다.</li><%}%>
-            <li class="footer-info-copyright"><%-copyright_text%></li>
+            <li class="footer-info-copyright"><%-config.copyright_text%></li>
           </ul>
         <%}%>
         <ul class="footer-places"><%-config.footer_html%></ul>
         <ul class="footer-icons">
           <li class="footer-poweredbyico">
-            <a href="//gitlab.com/librewiki/Liberty-MW-Skin">Liberty</a> | <a href="//github.com/wjdgustn/thetree">the tree</a>
+            <a href="//gitlab.com/librewiki/Bita-MW-Skin">Bita</a> | <a href="//github.com/wjdgustn/thetree">the tree</a>
           </li>
         </ul>
       </div>
-      <div x-cloak x-show="$store.state.localConfig['liberty.sidebar'] === 'footer'" class="footer-recent">
+      <div x-cloak x-show="$store.state.localConfig['bita.sidebar'] === 'footer'" class="footer-recent">
         <%-include('./layouts/recentCard', {limit:8})%>
         <div class="live-recent-footer">
           <a href="/RecentChanges" title="최근 변경내역"><span class="label label-info">더 보기</span></a>
