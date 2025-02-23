@@ -680,7 +680,6 @@ del, s, strike {
     border: var(--liberty-brand-color);
     background: var(--liberty-brand-color);
     margin-right: 20px;
-    margin-top: 5px;
     float: right;
 }
 
