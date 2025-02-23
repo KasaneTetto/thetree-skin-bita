@@ -42,14 +42,14 @@ window.requestable = JSON.stringify(requestable);
                 <a href="/random" class="dropdown-item"><span class="ion ion-ios-shuffle"></span>아무 문서</a>
                 <div class="dropdown-divider"></div>
                 <a href="/NeededPages" class="dropdown-item"><span class="ion ion-ios-brush"></span>작성이 필요한 문서</a>
-                <a href="/OrphanedPages" class="dropdown-item"><span class="ion ion-ios-document-lock"></span>고립된 문서</a>
-                <a href="/UncategorizedPages" class="dropdown-item"><span class="ion ion-ios-document-attach"></span>분류가 되지 않은 문서</a>
+                <a href="/OrphanedPages" class="dropdown-item"><span class="ion ion-ios-lock"></span>고립된 문서</a>
+                <a href="/UncategorizedPages" class="dropdown-item"><span class="ion ion-ios-attach"></span>분류가 되지 않은 문서</a>
                 <a href="/OldPages" class="dropdown-item"><span class="ion ion-ios-alarm"></span>편집된 지 오래된 문서</a>
-                <a href="/LongestPages" class="dropdown-item"><span class="ion-ios-trendiion ng-up"></span>내용이 긴 문서</a>
+                <a href="/LongestPages" class="dropdown-item"><span class="ion ion-ios-trending-up"></span>내용이 긴 문서</a>
                 <a href="/ShortestPages" class="dropdown-item"><span class="ion ion-ios-trending-down"></span>내용이 짧은 문서</a>
-                <a href="/BlockHistory" class="dropdown-item"><span class="ion ion-ios-documents"></span>차단 내역</a>
+                <a href="/BlockHistory" class="dropdown-item"><span class="ion ion-ios-copy"></span>차단 내역</a>
                 <a href="/RandomPage" class="dropdown-item"><span class="ion ion-ios-git-branch"></span>RandomPage</a>
-                <a href="/License" class="dropdown-item"><span class="ion ion-ios-logo-closed-captioning"></span>라이선스</a>
+                <a href="/License" class="dropdown-item"><span class="ion ion-logo-closed-captioning"></span>라이선스</a>
                 <%if(session.menus.length) {%>
                 <div class="dropdown-divider"></div>
                 <%for(let m of session.menus) {%>
@@ -67,23 +67,23 @@ window.requestable = JSON.stringify(requestable);
             <%if(session.gravatar_url) {%>
               <img class="profile-img" src="<%=session.gravatar_url%>">
             <%} else {%>
-              <span class="fa fa-user"></span>
+              <span class="ion ion-md-contact"></span>
             <%}%>
           </a>
           <div class="open" x-cloak x-show="open" @click="open = false" @click.outside="open = false">
             <div class="dropdown-menu dropdown-menu-right login-dropdown-menu">
               <%if(session.account.type === UserTypes.Account) {%>
               <div class="username dropdown-item">
-                <b><%=session.account.name%></b><br>Member
+                <b><%=session.account.name%></b><br>사용자
               </div>
               <%} else {%>
               <div class="username dropdown-item">
-                <b><%=session.account.name%></b><br>Please login!
+                <b><%=session.account.name%></b><br>IP 사용자
               </div>
               <%}%>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item" @click.prevent="$store.state.openSettingModal">설정</a>
-              <a x-show="$store.state.currentTheme === 'light'" href="#" class="dropdown-item" @click.prevent="$store.state.setLocalConfig('wiki.theme', 'dark')">다크 테마로</a>
+              <a x-show="$store.state.currentTheme === 'light'" href="#" class="dropdown-item" @click.prevent="$store.state.setLocalConfig('wiki.theme', 'dark')"><span class="ion ion-md-flashlight" style="color: #373a3c"></span>다크 테마로</a>
               <a x-show="$store.state.currentTheme === 'dark'" href="#" class="dropdown-item" @click.prevent="$store.state.setLocalConfig('wiki.theme', 'light')">라이트 테마로</a>
               <div class="dropdown-divider"></div>
               <%if(session.account.type === UserTypes.Account) {%>
