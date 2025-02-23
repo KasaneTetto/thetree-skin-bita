@@ -6,8 +6,8 @@ window.requestable = JSON.stringify(requestable);
 </script>
 <script src="/skins/<%=skin%>/js/main.js"></script>
 <!-- TODO: ionicons 7.4.0으로 대체 -->
-<script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/esm/ionicons.min.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons.min.js"></script>
 
 <style>
   @import "/skins/<%=skin%>/css/bootstrap.min.css";
@@ -15,7 +15,7 @@ window.requestable = JSON.stringify(requestable);
   @import "/skins/<%=skin%>/css/default.css";
   @import '/skins/<%=skin%>/css/default_mobile.css';
   @import "/skins/<%=skin%>/css/dark.css";
-  @import "/skins/<$=skin%>/css/custom.css";
+  @import "/skins/<%=skin%>/css/custom.css";
   
   @import "/skins/<%=skin%>/css/layouts/contentTool.css";
   @import "/skins/<%=skin%>/css/layouts/recentCard.css";

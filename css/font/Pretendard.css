@@ -1,6 +1,7 @@
+/* 좆같아서 씨발 로컬쓴다 개새끼들 */
 @font-face {
     font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    src: url('../../font/Pretendard-Regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
