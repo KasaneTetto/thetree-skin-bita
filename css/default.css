@@ -235,13 +235,6 @@ del, s, strike {
     transition: .3s;
 }
 
-.random {
-    border-width: 2px;
-    border-color: transparent;
-    border-radius: 0.15rem;
-    margin-right: 5px;
-}
-
 .Bita .nav-wrapper .navbar .form-inline .btn .ion {
     width: 0.9rem;
 }

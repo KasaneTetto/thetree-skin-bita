@@ -1,9 +1,12 @@
 <div id="search">
   <form id="searchform" class="form-inline" @submit.prevent x-data="search">
     <div class="input-group">
-      <div class="random">
-        <span class="ion ion-ios-repeat"></span>
-        <a href="/random" name="아무 문서로"></a>
+      <div class="input-group-btn">
+        <a href="/random" name="아무 문서로">
+          <button class="btn btn-secondary">
+            <span class="ion ion-ios-repeat"></span>
+          </button>
+        </a>
       </div>
       <div class="input-search">
         <input x-ref="input" type="search" name="q" placeholder="검색" accesskey="f" class="form-control" id="searchInput" autocomplete="off" x-model="searchText" @blur="blur" @focus="focus" @input="inputChange" @keydown.enter="keyEnter" @keydown.tab="keyEnter" @keydown.up="keyUp" @keydown.down="keyDown">
