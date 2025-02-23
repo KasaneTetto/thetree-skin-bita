@@ -1,6 +1,10 @@
 <div id="search">
   <form id="searchform" class="form-inline" @submit.prevent x-data="search">
     <div class="input-group">
+      <div class="random">
+        <span class="ion ion-ios-repeat"></span>
+        <a href="/random" name="아무 문서로"></a>
+      </div>
       <div class="input-search">
         <input x-ref="input" type="search" name="q" placeholder="검색" accesskey="f" class="form-control" id="searchInput" autocomplete="off" x-model="searchText" @blur="blur" @focus="focus" @input="inputChange" @keydown.enter="keyEnter" @keydown.tab="keyEnter" @keydown.up="keyUp" @keydown.down="keyDown">
         <div x-cloak x-show="show" class="v-autocomplete-list">
@@ -12,8 +16,8 @@
         </div>
       </div>
       <span class="input-group-btn">
-      <button type="submit" name="fulltext" value="검색" class="btn btn-secondary" @click="onClickSearch"><span class="fa fa-search"></span></button>
-      <button type="submit" name="fulltext" value="보기" class="btn btn-secondary" @click="onClickMove"><span class="fa fa-arrow-right"></span></button>
+      <button type="submit" name="fulltext" value="검색" class="btn btn-secondary" @click="onClickSearch"><span class="ion ion-ios-search"></span></button>
+      <button type="submit" name="fulltext" value="보기" class="btn btn-secondary" @click="onClickMove"><span class="ion ion-ios-return-left"></span></button>
   </span>
     </div>
   </form>

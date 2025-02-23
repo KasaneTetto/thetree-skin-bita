@@ -5,6 +5,9 @@ const requestable = page.data.editable === true && !!page.data.edit_acl_message 
 window.requestable = JSON.stringify(requestable);
 </script>
 <script src="/skins/<%=skin%>/js/main.js"></script>
+<!-- TODO: ionicons 7.4.0으로 대체 -->
+<script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
 
 <style>
   @import "/skins/<%=skin%>/css/bootstrap.min.css";
@@ -115,20 +118,18 @@ window.requestable = JSON.stringify(requestable);
           <div class="live-recent-header">
             <ul class="nav nav-tabs">
               <li class="nav-item">
-                <a id="liberty-recent-tab1" class="nav-link active">최근 변경</a>
+                <a id="liberty-recent-tab1" class="nav-link active"><span class="ion ion-ios-refresh-circle"></span>최근 변경</a>
+                <a href="/RecentChanges" title="최근 변경내역"><span class="label label-info">더 보기</span></a>
               </li>
             </ul>
           </div>
           <%-include('./layouts/recentCard')%>
-          <div class="live-recent-footer">
-            <a href="/RecentChanges" title="최근 변경내역"><span class="label label-info">더 보기</span></a>
-          </div>
         </div>
       </div>
     </div>
     <div id="content" class="container-fluid liberty-content">
       <%if(config.sitenotice) {%>
-      <div id="site-notice" class="notification">
+      <div id="site-notice" class="thetree-alert-primary">
         <span class="label"><%-config.sitenotice%></span>
       </div>
       <%}%>

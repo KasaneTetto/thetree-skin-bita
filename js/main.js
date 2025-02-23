@@ -26,24 +26,24 @@ function selectByTheme(light, dark) {
     return getLocalConfig('wiki.theme') === 'dark' ? dark : light;
 }
 
-const brand_color = () => selectByTheme(CONFIG['skin.liberty.brand_color_1'] ?? CONFIG['theme_color'] ?? '#4188f1', '#2d2f34');
+const brand_color = () => selectByTheme(CONFIG['skin.bita.brand_color_1'] ?? CONFIG['theme_color'] ?? '#87cefa', '#1d2023');
 
 const style = document.createElement('style');
 function setStyles() {
     const styles = {
-        '--liberty-brand-color': brand_color(),
-        '--liberty-brand-dark-color': selectByTheme(CONFIG['skin.liberty.brand_dark_color_1'] ?? darkenColor(brand_color()), '#16171a'),
-        '--liberty-brand-bright-color': selectByTheme(CONFIG['skin.liberty.brand_bright_color_1'] ?? lightenColor(brand_color()), '#383b40'),
-        '--liberty-navbar-logo-image': CONFIG['logo_image'] && `url(${CONFIG['logo_image']})`,
-        '--liberty-navbar-logo-minimum-width': CONFIG['skin.liberty.navbar_logo_minimum_width'],
-        '--liberty-navbar-logo-width': CONFIG['skin.liberty.navbar_logo_width'],
-        '--liberty-navbar-logo-size': CONFIG['skin.liberty.navbar_logo_size'],
-        '--liberty-navbar-logo-padding': CONFIG['skin.liberty.navbar_logo_padding'],
-        '--liberty-navbar-logo-margin': CONFIG['skin.liberty.navbar_logo_margin'],
-        '--brand-color-1': 'var(--liberty-brand-color)',
-        '--brand-color-2': selectByTheme(CONFIG['skin.liberty.brand_color_2'] ?? 'var(--liberty-brand-color)', 'var(--liberty-brand-color)'),
-        '--brand-bright-color-1': 'var(--liberty-brand-bright-color)',
-        '--brand-bright-color-2': selectByTheme(CONFIG['skin.liberty.brand_bright_color_2'] ?? 'var(--liberty-brand-bright-color)', 'var(--liberty-brand-bright-color)'),
+        '--bita-brand-color': brand_color(),
+        '--bita-brand-dark-color': selectByTheme(CONFIG['skin.bita.brand_dark_color_1'] ?? darkenColor(brand_color()), '#16171a'),
+        '--bita-brand-bright-color': selectByTheme(CONFIG['skin.bita.brand_bright_color_1'] ?? lightenColor(brand_color()), '#383b40'),
+        '--bita-navbar-logo-image': CONFIG['logo_image'] && `url(${CONFIG['logo_image']})`,
+        '--bita-navbar-logo-minimum-width': CONFIG['skin.bita.navbar_logo_minimum_width'],
+        '--bita-navbar-logo-width': CONFIG['skin.bita.navbar_logo_width'],
+        '--bita-navbar-logo-size': CONFIG['skin.bita.navbar_logo_size'],
+        '--bita-navbar-logo-padding': CONFIG['skin.bita.navbar_logo_padding'],
+        '--bita-navbar-logo-margin': CONFIG['skin.bita.navbar_logo_margin'],
+        '--brand-color-1': 'var(--bita-brand-color)',
+        '--brand-color-2': selectByTheme(CONFIG['skin.bita.brand_color_2'] ?? 'var(--bita-brand-color)', 'var(--bita-brand-color)'),
+        '--brand-bright-color-1': 'var(--bita-brand-bright-color)',
+        '--brand-bright-color-2': selectByTheme(CONFIG['skin.bita.brand_bright_color_2'] ?? 'var(--bita-brand-bright-color)', 'var(--bita-brand-bright-color)'),
         '--text-color': selectByTheme('#373a3c', '#ddd'),
         '--article-background-color': selectByTheme('#fff', '#000')
     }
@@ -73,7 +73,7 @@ document.addEventListener('alpine:init', () => {
 document.addEventListener('thetree:pageLoad', () => {
     Alpine.store('skin').hideEditMessage();
 
-    if(State.getLocalConfig('liberty.reset_search_on_move') !== false) {
+    if(State.getLocalConfig('bita.reset_search_on_move') !== false) {
         const searchInput = document.getElementById('searchInput');
         searchInput.value = '';
         searchInput.dispatchEvent(new Event('input'));
