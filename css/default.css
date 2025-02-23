@@ -327,7 +327,7 @@ del, s, strike {
 /* 사이드바 수정 */
 .Bita .content-wrapper .bita-sidebar {
     float: right;
-    width: 12rem;
+    width: 15rem;
     position: relative;
     word-break: break-all;
 }
@@ -342,7 +342,7 @@ del, s, strike {
 }
 
 .Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent {
-    width: 12rem;
+    width: 15rem;
 }
 
 .Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav {
@@ -350,7 +350,7 @@ del, s, strike {
 }
 
 .Bita .content-wrapper .bita-sidebar .bita-right-fixed .live-recent .live-recent-header .nav .nav-item {
-    width: 12rem;
+    width: 15rem;
     border: 1px solid #e1e8ed;
     border-bottom: 0;
     border-top-left-radius: 0.15rem;
@@ -386,7 +386,7 @@ del, s, strike {
     left: -1px;
     bottom: -1px;
     content: " ";
-    width: 12rem;
+    width: 15rem;
     display: block;
     border-bottom: 2px solid var(--bita-brand-color, #4188f1);
 } */
