@@ -1,6 +1,5 @@
 ## 개요
-the tree용 리버티 스킨
+하늘위키에서 사용(할 예정)인 스킨. 전체적으로 senkawa를 현대적으로 재해석(?)한다.
 
-## 원작
-- [theseed-skin-liberty](https://github.com/namu-theseed/theseed-skin-liberty) Made by [the seed](https://theseed.io)
-- [Liberty Skin](https://gitlab.com/librewiki/Liberty-MW-Skin) Made by [Librewiki](https://librewiki.net)
+## Super Thanks
+VanillaDev - sidebar

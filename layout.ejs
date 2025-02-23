@@ -115,13 +115,18 @@ window.requestable = JSON.stringify(requestable);
         <div class="live-recent">
           <div class="live-recent-header">
             <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a id="bita-recent-tab1" class="nav-link active"><span class="ion ion-ios-refresh-circle"></span>최근 변경</a>
-                <a href="/RecentChanges" title="최근 변경내역"><span class="label label-info">더 보기</span></a>
+              <li class="nav-item" style="text-align: left;">
+                <div class="recent-head-title">
+                  <h3 style="margin: 0; display: flex; align-items: center;">
+                    <span class="ion ion-ios-refresh-circle"></span>
+                    <span class="recent-head-text">최근 변경</span>
+                  </h3>
+                  <a href="/RecentChanges" class="btn btn-recentchanges">더보기</a>
+                </div>
               </li>
             </ul>
           </div>
-          <%-include('./layouts/recentCard')%>
+          <%-include('./layouts/recentCard', {limit:13})%>
         </div>
       </div>
     </div>
