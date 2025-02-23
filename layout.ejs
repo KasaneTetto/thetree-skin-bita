@@ -4,10 +4,8 @@ const requestable = page.data.editable === true && !!page.data.edit_acl_message 
 <script nonce="<%=cspNonce%>">
 window.requestable = JSON.stringify(requestable);
 </script>
-<script src="/skins/<%=skin%>/js/main.js"></script>
+<script nonce="/skins/<%=skin%>/js/main.js"></script>
 <!-- TODO: ionicons 7.4.0으로 대체 -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/esm/ionicons.min.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons.min.js"></script>
 
 <style>
   @import "/skins/<%=skin%>/css/bootstrap.min.css";

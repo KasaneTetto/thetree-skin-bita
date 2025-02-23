@@ -18,15 +18,15 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-    font-ionmily: "Pretendard-Regular", "MaplestoryOTFBold";
+    font-family: "Pretendard-Regular", "MaplestoryOTFBold";
 }
 
 h1, h2, h3, h4, h5, h6, b {
-    font-ionmily: "Pretendard-Regular", "MaplestoryOTFBold";
+    font-family: "Pretendard-Regular", "MaplestoryOTFBold";
 }
 
 input[type=password] {
-    font-ionmily: "Pretendard-Regular";
+    font-family: "Pretendard-Regular";
 }
 
 h1 {
@@ -94,7 +94,8 @@ th[rowspan]:after, td[rowspan]:after {
 }
 
 input[type=search] {
-    -webkit-appearance: none; /* iOS 잡다한 css설정 제거 */
+    -webkit-appearance: none;
+    appearance: none; /* iOS 잡다한 css설정 제거 */
 }
 
 textarea {
@@ -220,7 +221,7 @@ del, s, strike {
     border-right-color: #e1e8ed;
 }
 
-.Bita .nav-wrapper .navbar .form-inline .input-search {
+.Liberty .nav-wrapper .navbar .form-inline .input-search {
     display: table-cell;
     float: left;
     position: relative;
@@ -228,7 +229,7 @@ del, s, strike {
     z-index: 4;
 }
 
-.Bita .nav-wrapper .navbar .form-inline .input-search .random {
+.Bita .nav-wrapper .navbar .form-inline .random {
     border-width: 1px;
     border-color: transparent;
     border-radius: 2.4px;
