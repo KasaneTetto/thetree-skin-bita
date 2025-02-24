@@ -2,7 +2,7 @@
 const requestable = page.data.editable === true && !!page.data.edit_acl_message && page.viewName !== 'notfound';
 %>
 <script nonce="<%=cspNonce%>">
-window.requestable = JSON.stringify(requestable);
+window.requestable = <%=JSON.stringify(requestable)%>;
 </script>
 <script nonce="/skins/<%=skin%>/js/main.js"></script>
 <!-- TODO: ionicons 7.4.0으로 대체 -->
@@ -27,33 +27,33 @@ window.requestable = JSON.stringify(requestable);
       <a class="navbar-brand" href="/"><%=config.logo_text%></a>
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/RecentChanges"><span class="ion ion-ios-compass"></span><span class="hide-title">최근 변경</span></a>
+          <a class="nav-link" href="/RecentChanges"><span class="ion ion-md-compass"></span><span class="hide-title">최근 변경</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/RecentDiscuss"><span class="ion ion-ios-chatbubbles"></span><span class="hide-title">최근 토론</span></a>
+          <a class="nav-link" href="/RecentDiscuss"><span class="ion ion-md-chatbubbles"></span><span class="hide-title">최근 토론</span></a>
         </li>
         <li class="nav-item" x-data="{ open: false }">
           <div class="dropdown">
             <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" @click.prevent="open = !open">
-              <span class="ion ion-ios-menu"></span><span class="hide-title">도구</span></a>
+              <span class="ion ion-md-menu"></span><span class="hide-title">도구</span></a>
             <div class="open" x-cloak x-show="open" @click="open = false" @click.outside="open = false">
               <div class="dropdown-menu" role="menu">
-                <a href="/Upload" class="dropdown-item"><span class="ion ion-ios-cloud-upload"></span>파일 올리기</a>
-                <a href="/random" class="dropdown-item"><span class="ion ion-ios-shuffle"></span>아무 문서</a>
+                <a href="/Upload" class="dropdown-item"><span class="ion ion-md-cloud-upload"></span>파일 올리기</a>
+                <a href="/random" class="dropdown-item"><span class="ion ion-md-shuffle"></span>아무 문서</a>
                 <div class="dropdown-divider"></div>
-                <a href="/NeededPages" class="dropdown-item"><span class="ion ion-ios-brush"></span>작성이 필요한 문서</a>
-                <a href="/OrphanedPages" class="dropdown-item"><span class="ion ion-ios-lock"></span>고립된 문서</a>
-                <a href="/UncategorizedPages" class="dropdown-item"><span class="ion ion-ios-attach"></span>분류가 되지 않은 문서</a>
-                <a href="/OldPages" class="dropdown-item"><span class="ion ion-ios-alarm"></span>편집된 지 오래된 문서</a>
-                <a href="/LongestPages" class="dropdown-item"><span class="ion ion-ios-trending-up"></span>내용이 긴 문서</a>
-                <a href="/ShortestPages" class="dropdown-item"><span class="ion ion-ios-trending-down"></span>내용이 짧은 문서</a>
-                <a href="/BlockHistory" class="dropdown-item"><span class="ion ion-ios-copy"></span>차단 내역</a>
-                <a href="/RandomPage" class="dropdown-item"><span class="ion ion-ios-git-branch"></span>RandomPage</a>
+                <a href="/NeededPages" class="dropdown-item"><span class="ion ion-md-brush"></span>작성이 필요한 문서</a>
+                <a href="/OrphanedPages" class="dropdown-item"><span class="ion ion-md-lock"></span>고립된 문서</a>
+                <a href="/UncategorizedPages" class="dropdown-item"><span class="ion ion-md-attach"></span>분류가 되지 않은 문서</a>
+                <a href="/OldPages" class="dropdown-item"><span class="ion ion-md-alarm"></span>편집된 지 오래된 문서</a>
+                <a href="/LongestPages" class="dropdown-item"><span class="ion ion-md-trending-up"></span>내용이 긴 문서</a>
+                <a href="/ShortestPages" class="dropdown-item"><span class="ion ion-md-trending-down"></span>내용이 짧은 문서</a>
+                <a href="/BlockHistory" class="dropdown-item"><span class="ion ion-md-copy"></span>차단 내역</a>
+                <a href="/RandomPage" class="dropdown-item"><span class="ion ion-md-git-branch"></span>RandomPage</a>
                 <a href="/License" class="dropdown-item"><span class="ion ion-logo-closed-captioning"></span>라이선스</a>
                 <%if(session.menus.length) {%>
                 <div class="dropdown-divider"></div>
                 <%for(let m of session.menus) {%>
-                <a href="<%=m.l%>" class="dropdown-item"><span class="ion ion-ios-diamond"></span><%=m.t%></a>
+                <a href="<%=m.l%>" class="dropdown-item"><span class="ion ion-md-diamond"></span><%=m.t%></a>
                 <%}%>
                 <%}%>
               </div>
@@ -83,7 +83,7 @@ window.requestable = JSON.stringify(requestable);
               <%}%>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item" @click.prevent="$store.state.openSettingModal">설정</a>
-              <a x-show="$store.state.currentTheme === 'light'" href="#" class="dropdown-item" @click.prevent="$store.state.setLocalConfig('wiki.theme', 'dark')"><span class="ion ion-md-flashlight" style="color: #373a3c"></span>다크 테마로</a>
+              <a x-show="$store.state.currentTheme === 'light'" href="#" class="dropdown-item" @click.prevent="$store.state.setLocalConfig('wiki.theme', 'dark')">다크 테마로</a>
               <a x-show="$store.state.currentTheme === 'dark'" href="#" class="dropdown-item" @click.prevent="$store.state.setLocalConfig('wiki.theme', 'light')">라이트 테마로</a>
               <div class="dropdown-divider"></div>
               <%if(session.account.type === UserTypes.Account) {%>
@@ -100,7 +100,7 @@ window.requestable = JSON.stringify(requestable);
               <%if(session.account.type === UserTypes.Account) {%>
                 <a href="/member/logout" data-add-redirect class="dropdown-item">로그아웃</a>
               <%} else {%>
-                <a href="/member/login" data-add-redirect class="dropdown-item"><span name="ion ion-ios-enter"></span>로그인</a>
+                <a href="/member/login" data-add-redirect class="dropdown-item"><span name="ion ion-md-enter"></span>로그인</a>
               <%}%>
             </div>
           </div>
@@ -118,7 +118,7 @@ window.requestable = JSON.stringify(requestable);
               <li class="nav-item" style="text-align: left;">
                 <div class="recent-head-title">
                   <h4 style="margin: 15px; display: flex; text-align: center;">
-                    <span class="ion ion-ios-refresh-circle"></span>&nbsp;
+                    <span class="ion-md-refresh-circle" style="font-size: 20px"></span>&nbsp;
                     <span class="recent-head-text">최근 변경</span>
                   </h4>
                   <a href="/RecentChanges" class="btn btn-recentchanges">[ 더보기 ]</a>
@@ -231,7 +231,7 @@ window.requestable = JSON.stringify(requestable);
         </div>
         <%if(page.viewName === 'license') {%>
         <div>
-          <h2>Bita skin license</h2>
+          <h2>bita 스킨 라이선스</h2>
           <pre><%=getSkinFile('LICENSE')%></pre>
         </div>
         <%}%>
@@ -249,7 +249,7 @@ window.requestable = JSON.stringify(requestable);
         <ul class="footer-places"><%-config.footer_html%></ul>
         <ul class="footer-icons">
           <li class="footer-poweredbyico">
-            <a href="//gitlab.com/librewiki/Bita-MW-Skin">Bita</a> | <a href="//github.com/wjdgustn/thetree">the tree</a>
+            <a href="//github.com/KasaneTetto/thetree-skin-bita">Bita</a> | <a href="//github.com/wjdgustn/thetree">the tree</a>
           </li>
         </ul>
       </div>
@@ -262,8 +262,8 @@ window.requestable = JSON.stringify(requestable);
     </div>
   </div>
   <div class="scroll-buttons">
-    <a class="scroll-toc" href="#toc"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
-    <a id="left" class="scroll-button" href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <a id="right" class="scroll-bottom" href="#bottom"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+    <a class="scroll-toc" href="#toc"><i class="ion ion-md-list" aria-hidden="true"></i></a>
+    <a id="left" class="scroll-button" href="#top"><i class="ion ion-md-arrow-up" aria-hidden="true"></i></a>
+    <a id="right" class="scroll-bottom" href="#bottom"><i class="ion ion-md-arrow-down" aria-hidden="true"></i></a>
   </div>
 </div>

@@ -16,11 +16,11 @@ const contentTool = {
     switch(page.viewName) {
       case 'wiki':
         if (this.data.date === null) {
-          this.main.push({
+          this.menu.push({
             to: doc_action_link(this.data.document, 'backlink'),
             title: "역링크"
           });
-          this.main.push({
+          this.menu.push({
             to: doc_action_link(this.data.document, 'acl') + '#namespace.read',
             title: "ACL"
           });
@@ -30,16 +30,12 @@ const contentTool = {
           if (this.data.starred) this.main.push({
             to: doc_action_link(this.data.document, 'member/unstar'),
             tooltip: "Unstar",
-            html: `<span class="fa fa-star"></span> <span class="star-count">${this.data.star_count}</span>`
+            html: `<span class="ion ion-md-heart-empty"></span> <span class="star-count">${this.data.star_count}</span>`
           });
           else if (this.data.star_count >= 0) this.main.push({
             to: doc_action_link(this.data.document, 'member/star'),
             tooltip: "Star",
-            html: `<span class="fa fa-star-o"></span> <span class="star-count">${this.data.star_count}</span>`
-          });
-          this.main.push({
-            to: doc_action_link(this.data.document, 'backlink'),
-            title: "역링크"
+            html: `<span class="ion ion-md-heart"></span> <span class="star-count">${this.data.star_count}</span>`
           });
           this.main.push({
             to: doc_action_link(this.data.document, 'discuss'),
@@ -48,23 +44,27 @@ const contentTool = {
           });
           if (this.data.editable === true && this.data.edit_acl_message) this.main.push({
             onclick: () => $store.skin.showEditMessage(),
-            html: `<span class="fa fa-pencil-square"></span> 편집 요청`
+            html: `<span class="ion ion-md-git-pull-request"></span> 편집 요청`
           });
           else if (this.data.editable === false && this.data.edit_acl_message) this.main.push({
             onclick: () => $store.skin.showEditMessage(),
-            html: `<span class="fa fa-lock"></span> 편집`
+            html: `<span class="ion ion-md-lock"></span> 편집`
           });
           else this.main.push({
               to: doc_action_link(this.data.document, 'edit'),
-              html: `<span class="fa fa-edit"></span> 편집`
+              html: `<span class="ion ion-md-create"></span> 편집`
             });
           this.main.push({
             to: doc_action_link(this.data.document, 'history', this.data.rev ? { from: this.data.rev } : undefined),
             title: "역사"
           });
-          this.main.push({
+          this.menu.push({
             to: doc_action_link(this.data.document, 'acl'),
             title: "ACL"
+          });
+          this.menu.push({
+            to: doc_action_link(this.data.document, 'backlink'),
+            title: "역링크"
           });
           if (this.data.user) {
             this.menu.push({
@@ -131,29 +131,29 @@ const contentTool = {
         break;
       case 'notfound':
         this.main.push({
-          to: doc_action_link(this.data.document, 'backlink'),
-          title: "역링크"
-        });
-        this.main.push({
           to: doc_action_link(this.data.document, 'discuss'),
           class: this.data.discuss_progress ? 'btn-discuss-progress' : null,
           title: "토론"
         });
         if (this.data.edit_acl_message) this.main.push({
           onclick: () => $store.skin.showEditMessage(),
-          html: `<span class="fa fa-lock"></span> 편집`
+          html: `<span class="ion ion-md-lock"></span> 편집`
         });
         else this.main.push({
           to: doc_action_link(this.data.document, 'edit'),
-          html: `<span class="fa fa-edit"></span> 편집`
+          html: `<span class="ion ion-md-create"></span> 편집`
         });
         this.main.push({
           to: doc_action_link(this.data.document, 'history', this.data.rev ? { from: this.data.rev } : undefined),
           title: "역사"
         });
-        this.main.push({
+        this.menu.push({
           to: doc_action_link(this.data.document, 'acl'),
           title: "ACL"
+        });
+        this.menu.push({
+          to: doc_action_link(this.data.document, 'backlink'),
+          title: "역링크"
         });
         break;
       case 'edit':
