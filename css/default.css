@@ -73,8 +73,9 @@ img {
 }
 
 .ion {
-    font-size: 16px;
+    font-size: 18px;
 }
+
 th[rowspan], td[rowspan] {
     position: relative;
 }
