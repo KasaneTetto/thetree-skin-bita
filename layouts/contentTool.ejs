@@ -30,12 +30,12 @@ const contentTool = {
           if (this.data.starred) this.main.push({
             to: doc_action_link(this.data.document, 'member/unstar'),
             tooltip: "Unstar",
-            html: `<span class="ion ion-md-heart-empty"></span> <span class="star-count">${this.data.star_count}</span>`
+            html: `<span class="ion ion-md-heart"></span> <span class="star-count">${this.data.star_count}</span>`
           });
           else if (this.data.star_count >= 0) this.main.push({
             to: doc_action_link(this.data.document, 'member/star'),
             tooltip: "Star",
-            html: `<span class="ion ion-md-heart"></span> <span class="star-count">${this.data.star_count}</span>`
+            html: `<span class="ion ion-md-heart-empty"></span> <span class="star-count">${this.data.star_count}</span>`
           });
           this.main.push({
             to: doc_action_link(this.data.document, 'discuss'),
